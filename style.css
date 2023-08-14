@@ -10,7 +10,6 @@ html{
 
 :root{
     --main-theme-color: #1057AA;
-    --color-trip: #1057AA;
     --color-column: #129BB9;
     --letter-color-blue: #1057AA;
     --color-original-white: #FBF4ED;
@@ -140,7 +139,7 @@ header.is_default{
 }
 
 #hamburger_menu.is_opened{
-    pointer-events:inherit;
+    pointer-events: initial;
     transform: translateY(0%);
     width: 100%;
 
@@ -181,7 +180,13 @@ nav#hamburger_menu ul li a{
 .en_menu{
     font-size: 30px;
 }
+main{
+    position: relative;
+}
 
+main.archive{
+    margin-top: 100px;
+}
 .key_visual{
     display: flex;
     align-items: center;
@@ -275,7 +280,7 @@ p.heading_desc.vertical{
 }
 .article_card{
     position: relative;
-    width: 320px;
+    width: 334px;
     border-radius: 16px;
     box-shadow: 4px 4px 0px 0px #1057AA;
     aspect-ratio: 1 / 1;
@@ -289,7 +294,9 @@ p.heading_desc.vertical{
     justify-content: space-between;
     align-items: flex-start
 }
-
+.article_card.column{
+    box-shadow: 4px 4px 0px 0px var(--color-column);
+}
 .article_card.column h3, .article_card.column .cat{
     width: fit-content;
     background: var(--color-original-white);
@@ -519,28 +526,47 @@ footer .sns_logos li{
     list-style: none;
 }
 
-aside.side_navigation{
-    position: fixed;
-    bottom: 4%;
-    right: 1%;
-    font-weight: 600;
-    color: var(--color-original-white);
+@media screen and (max-width: 867px){
+    aside.side_navigation{
+        display: none;
+    }
 }
 
-aside.side_navigation ul{
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
 
-aside.side_navigation ul li{
-    list-style: none;
-    font-size: 14px;
-    text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);
+@media screen and (min-width: 867px){
+    aside.side_navigation{
+        position: fixed;
+        font-weight: 600;
+        color: var(--color-original-white);
+        justify-content: flex-end;
+        align-items: center;
+        padding: 20px;
+        box-sizing: border-box;
+        max-width: 1000px;
+        left: calc(240px + 51%);
+        top: calc(50% - 100px );
+    }
     
-}
-aside.side_navigation ul li a{
-    text-decoration: none;
-    color: var(--color-original-white);
+    aside.side_navigation ul{
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    
+    aside.side_navigation ul li{
+        list-style: none;
+        font-size: 17px;
+        text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);
+        
+    }
+    aside.side_navigation ul li a{
+        text-decoration: none;
+        color: var(--color-original-white);
+    }
+
 }
 
+/* アーカイブページのレイアウト */
+.archive .article_cards_wrapper{
+    flex-direction: column;
+}

@@ -16,7 +16,7 @@ html{
 }
 
 body{
-    font-family: "Raleway", "Noto Sans JP", sans-serif;
+    font-family: "Raleway", "Yu Gothic", "Noto Sans JP", sans-serif;
     letter-spacing: 0.08em;
     display: flex;
     flex-direction: column;
@@ -41,8 +41,13 @@ body{
 
 }
 
+h1{
+    font-size: 22px;
+}
+
 p{
     line-height: 2em;
+    font-weight: 500;
     
 }
 .is_fixed{
@@ -61,20 +66,20 @@ header, main, footer{
     /* box-shadow: 0px 4px 19px 0px rgba(0, 0, 0, 0.19); */
 }
 
-header{
+header#site_header{
     height: 100px;
     background: var(--color-original-white);
     transform: translateY(0px);
     transition: all 0.6s;
 }
-header.is_default{
+header#site_header.is_default{
     transform: translateY(-100px);
     transition: all 0.6s;
 }
 
 
 #hamburger_menu_list li{
-    transition: all 1.2s;
+    transition: all 0.9s;
     opacity: 0;
     transform: translateY(120px);
     transition-delay: 0.2s;
@@ -105,7 +110,8 @@ header.is_default{
 .hamburger_menu_wrapper {
     width: 100%;
     position: absolute;
-    top: 100px;
+    top: 0px;
+    padding-top: 100px;
     height: 100vh;
     overflow: hidden;
     pointer-events: none;
@@ -135,15 +141,17 @@ header.is_default{
     width: 100%;
     transition: ease-out 0.3s;
     overflow-y: hidden;
-    transform: translateY(100%);
+    transform: translateY(112%);
 }
 
 #hamburger_menu.is_opened{
     pointer-events: initial;
     transform: translateY(0%);
     width: 100%;
-
+    padding-top: 100px;
 }
+
+
 .logo_header{
     height: 70px;
     width: fit-content;
@@ -155,6 +163,7 @@ header.is_default{
 }
 div#menu_btn {
     margin-left: auto;
+    z-index: 1111;
 }
 
 nav#hamburger_menu {
@@ -184,10 +193,11 @@ main{
     position: relative;
 }
 
-main.archive{
+main.archive, main.single{
     margin-top: 100px;
 }
 .key_visual{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -229,7 +239,11 @@ h2.heading_cursive{
     letter-spacing: 1.9px;
     font-weight: 400;
 }
-
+.cursive{
+    font-family: 'Sacramento', cursive;
+    color: var(--main-theme-color);
+    font-size: 16px;
+}
 img{
     width: 100%;
 }
@@ -260,7 +274,7 @@ p.heading_desc{
     font-weight: 600;
 }
 
-p.heading_desc.vertical{
+.vertical{
     writing-mode: vertical-rl;
 }
 
@@ -567,6 +581,322 @@ footer .sns_logos li{
 }
 
 /* アーカイブページのレイアウト */
-.archive .article_cards_wrapper{
+.archive .article_cards_wrapper, .single .article_cards_wrapper{
     flex-direction: column;
+}
+/* 記事ページのレイアウト */
+main.single{
+    background: var(--color-original-white);
+}
+main.single .post__header, main.single .post__mainText, main.single .post__footer{
+    color: var(--main-theme-color);
+    box-sizing: border-box;
+    padding: 0px 20px;
+}
+
+main.single .post__header{
+    padding: 12px 20px;
+}
+
+main.single .post__mainText{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 64px 20px;
+}
+
+main.single .post__footer{
+    padding-bottom: 64px;
+    background: var(--color-original-white);
+}
+
+main.single .post__share{
+    text-align: center;
+    display: flex;
+    padding: 3px 0px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 78px;
+    align-self: stretch;
+    border-top: 1px solid var(--main-skyblue, #1057AA);
+border-bottom: 1px solid var(--main-skyblue, #1057AA);
+
+}
+
+/* photo */
+
+header#site_header.header__photograph{
+    background: none;
+}
+
+header.header__photograph .logo_header{
+    visibility: none;
+    opacity: 0;
+    display: none;
+}
+article{
+    width: 100%;
+}
+.photo__key_visual{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+.contents__photograph{
+    background: var(--color-original-white);
+}
+.photo__sec{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* height: 100vh; */
+    /* justify-content: center; */
+    /* padding: 64px 0px; */
+    align-items: center;
+}
+
+.photo__sec_01_wrapper{
+    position: relative;
+}
+
+.photo_ttl{
+    font-size: 32px;
+    text-shadow: 0px 0px 9px rgba(0, 0, 0, 0.15);
+    font-weight: 600;
+    text-align: justify;
+}
+
+section.contents__photograph {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    padding-bottom: 64px;;
+    
+}
+
+.contents__photograph .key_visual{
+    height: 100vh;
+    background: url('./img/miharashi.jpg');
+    background-size: cover;
+}
+
+.sec_ttl{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    z-index: 999;
+    gap: 10px;
+    width: 70%;
+
+}
+
+.sec_ttl.right{
+    align-items: flex-end;
+    transform: translate(0%, -50%);
+    right: 20px;
+    top: 50%;
+    left: unset;
+}
+
+.sec_ttl.left{
+    align-items: flex-start;
+    transform: translate(0%, -50%);
+    top: 50%;
+    left: 20px;
+}
+.sec_ttl_img{
+    height: 70px;
+    width: auto;
+}
+
+.sec_desc{
+    font-weight: 600;
+    color: var(--main-theme-color);
+    text-align: center;
+    font-size: 12px;
+}
+
+
+.sec01__photo._01{
+    width: 58%;
+    margin-right: auto;
+}
+
+.row-01, .row-02{
+    overflow: hidden;
+}
+.sec01__photo._02{
+    margin-left: auto;
+    display: flex;
+}
+
+.sec01__photo._02 div{
+    width: ;
+}
+.sec01__photo._03{
+    left: 0;
+    height: 9%;
+    top: 53.6%;
+}
+
+.sec01__photo_child01 {
+    margin-top: 18em;
+    width: 47%;
+}
+
+.sec01__photo_child02 {
+    width: 85%;
+    margin-top: 36px;
+}
+
+.sec01__photo img{
+    height: auto;
+    width: 100%;
+}
+
+.sec01__photo .row-02 {
+    margin-top: 47px;
+}
+
+.sec03__photo._01{
+    display: flex;
+}
+.sec03__photo_child01{
+    width: 85%;
+} 
+.sec03__photo_child02{
+    width: 70%;
+    margin-top: 64px;
+} 
+
+.sec03__photo_child03{
+    margin-top: 36px;
+}
+
+.sec04__photo._01{
+    display: flex;
+}
+
+.sec04__photo_child01{
+    margin-top: 78px;
+}
+
+.sec04__photo_child02{
+    width: 86%;
+    margin-left: auto;
+}
+
+.sec04__photo_child03{
+    width: 76%;
+    margin-left: auto;
+    margin-top: 270px;
+}
+
+.sec06__photo._01{
+    display: flex;
+}
+
+.sec06__photo_child01 {
+    width: 100%;
+    margin-top: 160px;
+}
+
+.sec06__photo_child02 {
+    width: 80%;
+    margin-left: 8%;
+    margin-top: 36px;
+}
+
+.sec06__photo_child05 {
+    width: 57%;
+    margin-left: auto;
+    margin-top: 172px;
+
+}
+
+.sec06__photo_child03 {
+    margin-top: 256px;
+}
+
+.photo__sec._06 .sec_ttl{
+    top: 69%;
+
+}
+
+.photo__sec._06 p.sec_ttl_img{
+    margin-left: -10px;
+}
+
+.photo__sec._07, .photo__sec._09{
+    width: 100%;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+.sec08__photo._01{
+    display: flex;
+}
+
+.sec08__photo_child01 {
+    width: 82%;
+}
+.sec08__photo_child02 {
+    width: 29%;
+    margin-top: 64px;
+}
+
+.sec08__photo_child03 {
+
+    margin-top: 64px;
+}
+.sec08__photo_child04 {
+    margin-top: 93px;
+    width: 90%;
+    margin-left: auto;
+}
+.scroll_hint_wrapper{
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+}
+.scroll_hint{
+
+    position: relative;
+    rotate: 90deg;
+}
+@keyframes scrollHint{
+    0%{
+        right: -95px;
+        opacity: 0;
+    }30%{
+        opacity: 1;
+
+    }100%{
+
+        opacity: 0;
+        right: -165px;
+    }
+}
+.scroll_hint::before{
+    position: absolute;
+    content: "";
+    top: 50%;
+    /* transform: translate(-50%, -50%); */
+    width: 85px;
+    right: -95px;
+    height: 1px;
+    rotate: 180deg;
+    background: var(--color-original-white);
+    animation: scrollHint 1.2s linear infinite;
+
 }

@@ -15,7 +15,7 @@
     <script src="https://kit.fontawesome.com/710f60ac35.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
+    <div class="cursor"></div>
     <header id="site_header" class="header__photograph">
         <div class="header_contents">
             <p class="logo_header">
@@ -228,6 +228,40 @@
             }
             console.log(e);
         }
+
+        //スクロール量に応じたアニメーション
+        const keyVisual = document.querySelector('.key_visual');
+        const menu = document.getElementById('menu_btn');
+        console.log(keyVisual.clientHeight);
+        menu.classList.add('is_white');
+        window.addEventListener('scroll', ()=>{
+            if(window.scrollY > (keyVisual.clientHeight)){
+                menu.classList.remove('is_white');
+            }else{
+                menu.classList.add('is_white');
+            }
+        })
+
+        //カーソルが追従する
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', (e)=>{
+            cursor.style.transform = 'translate(' + e.clientX + 'px, ' + parseInt( window.scrollY + e.clientY ) + 'px)';
+            console.log(window.scrollY);
+        })
+
+        //aタグにカーソルを重ねたときにカーソルを大きくする
+        const anchor = document.querySelectorAll('a');
+        anchor.forEach((e)=>{
+            
+            e.addEventListener('mouseover', ()=>{
+                cursor.classList.add('isHover');
+                console.log(e);
+            })
+            e.addEventListener('mouseout', ()=>{
+                cursor.classList.remove('isHover');
+                console.log('out!');
+            })
+        })
 
     </script>
     

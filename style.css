@@ -6,6 +6,7 @@
 
 html{
     scroll-behavior: smooth;
+    font-size: 10px;
 }
 
 :root{
@@ -16,7 +17,7 @@ html{
 }
 
 body{
-    font-family: "Raleway", "Yu Gothic", "Noto Sans JP", sans-serif;
+    font-family: "Raleway", "游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic", "Noto Sans JP", sans-serif;
     letter-spacing: 0.08em;
     display: flex;
     flex-direction: column;
@@ -26,7 +27,37 @@ body{
     /* background: url('img/background-sea.png'); */
     background-size: cover;
     background-repeat: no-repeat;
-    font-size: 14px;
+    font-size: 1.4rem;
+    /* cursor: none!important; */
+
+}
+
+
+
+.cursor{
+
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: var(--color-column);
+    border-radius: 100px;
+    opacity: 0.2;
+    z-index: 99999;
+    transform-origin: center;
+    transition: width 0.5s, height 0.5s, top 0.5s, left 0.5s;
+    transform: translate(-50%, -50%);
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
+}
+
+.cursor.isHover{
+    transition: all 0.4s;
+    transform: scale(10);
+    width: 100px;
+    height: 100px;
+    top: -50px;
+    left: -50px;
 }
 
 .background{
@@ -42,7 +73,7 @@ body{
 }
 
 h1{
-    font-size: 22px;
+    font-size: 2.2rem;
 }
 
 p{
@@ -166,6 +197,14 @@ div#menu_btn {
     z-index: 1111;
 }
 
+#menu_btn svg line{
+    stroke: var(--main-theme-color);
+    transition: all 0.4s;
+}
+#menu_btn.is_white svg line{
+    stroke: white;
+}
+
 nav#hamburger_menu {
     position: absolute;
     background: var(--color-original-white);
@@ -235,7 +274,7 @@ main.archive, main.single{
 h2.heading_cursive{
     position: relative;
     font-family: 'Sacramento', cursive;
-    font-size: 4.5em;
+    font-size: 6.8rem;
     letter-spacing: 1.9px;
     font-weight: 400;
 }
@@ -281,6 +320,7 @@ p.heading_desc{
 .article_cards_list{
     display: flex;
     flex-wrap: nowrap;
+    position: relative;
     /* gap: 24px; */
     width: 100%;
     justify-content: center;
@@ -460,9 +500,14 @@ nav#hamburger_menu .sns_logos{
     transition: all 0.4s;
 }
 
-.button:hover{
+.button:active{
     box-shadow: 0px 0px 0px 0px #0f2f55;
     transform: translateY(3px);
+}
+
+.button:hover{
+    opacity: 0.9;
+    transform: scale(1.05);
 }
 
 .button.border{
@@ -472,11 +517,27 @@ nav#hamburger_menu .sns_logos{
     box-shadow: none;
     color: var(--color-original-white);
     overflow: hidden;
+    opacity: 1;
 }
 
 .button.border:hover{
     transform: translate(0px);
     color: var(--main-theme-color);
+    border: 1;
+}
+
+.slider_btn{    
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    z-index: 99999;
+}
+
+.slider_btnBody:before{
+    background-color: var(--color-original-white);
+    width: 50px;
+    height: 50px;
 }
 
 .column .button.border:hover{
@@ -741,7 +802,7 @@ section.contents__photograph {
 }
 
 .sec01__photo._02 div{
-    width: ;
+    /* width: ; */
 }
 .sec01__photo._03{
     left: 0;
@@ -866,7 +927,8 @@ section.contents__photograph {
 }
 .scroll_hint_wrapper{
     position: absolute;
-    bottom: 100px;
+    transform: translateY(-50%);
+    top: 50%;
     right: 0;
 }
 .scroll_hint{

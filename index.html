@@ -17,6 +17,7 @@
 </head>
 <body>
 
+    <div class="cursor"></div>
     <header id="site_header">
         <div class="header_contents">
             <p class="logo_header">
@@ -65,6 +66,7 @@
             <section class="key_visual">
                     <img src="./img/logo.png" alt="えのしまトリップ">
                     <p>江ノ島の情報をお届けする<br>Webマガジン</p>
+                    <div class="scroll_hint_wrapper"><p class="scroll_hint">Scroll</p></div>
             </section>
             <section id="recommend" class="recommend">
                 <h2 class="heading_cursive">Recommend</h2>
@@ -131,6 +133,7 @@
                 <h2 class="heading_cursive">Sightseeing</h2>
                 <p class="heading_desc">江ノ島の観光名所</p>
                 <div class="article_cards_list">
+                    <div class="slider_btn left"></div>
                     <div class="article_cards_wrapper">
                         <article class="article_card sightseeing shadow-wt">
                             <p class="cat">スポット</p>
@@ -352,31 +355,32 @@
                 { transform: `translateX(-${articleCard + 24}px)` }
             ],
             {
-                duration: 10000,
+                duration: 30000,
                 iterations: Infinity
             }
         );
 
-        articleList2.animate(
-            [
-                { transform: `translateX(${articleCard + 24}px)` },
-                { transform: `translateX(-${articleCard + 24}px)` }
-            ],
-            {
-                duration: 10000,
-                iterations: Infinity
-            }
-        );
-        articleList3.animate(
-            [
-                { transform: `translateX(${articleCard + 24}px)` },
-                { transform: `translateX(-${articleCard + 24}px)` }
-            ],
-            {
-                duration: 10000,
-                iterations: Infinity
-            }
-        );
+        // articleList2.animate(
+        //     [
+        //         { transform: `translateX(${articleCard + 24}px)` },
+        //         { transform: `translateX(-${articleCard + 24}px)` }
+        //     ],
+        //     {
+        //         duration: 30000,
+        //         iterations: Infinity
+        //     }
+        // );
+
+        // articleList3.animate(
+        //     [
+        //         { transform: `translateX(${articleCard + 24}px)` },
+        //         { transform: `translateX(-${articleCard + 24}px)` }
+        //     ],
+        //     {
+        //         duration: 30000,
+        //         iterations: Infinity
+        //     }
+        // );
 
         window.addEventListener("hashchange", function() {
         var fixedOffset = header.offsetHeight;
@@ -387,6 +391,27 @@
             behavior: 'smooth'
         });
         });
+
+        //カーソルが追従する
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', (e)=>{
+            cursor.style.transform = 'translate(' + e.clientX + 'px, ' + parseInt( window.scrollY + e.clientY ) + 'px)';
+            console.log(window.scrollY);
+        })
+
+        //aタグにカーソルを重ねたときにカーソルを大きくする
+        const anchor = document.querySelectorAll('a');
+        anchor.forEach((e)=>{
+            
+            e.addEventListener('mouseover', ()=>{
+                cursor.classList.add('isHover');
+                console.log(e);
+            })
+            e.addEventListener('mouseout', ()=>{
+                cursor.classList.remove('isHover');
+                console.log('out!');
+            })
+        })
 
 
     </script>

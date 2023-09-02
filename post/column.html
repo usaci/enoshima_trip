@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <title>えのしまトリップ</title>
+    <title>江ノ電に初めて乗った15の夏 | えのしまトリップ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="えのしまトリップは、江ノ島の耳寄り情報をお届けするWebマガジンです。">
+    <meta name="description" content="15歳の夏、主人公は江ノ電に初めて乗る決断をしました。彼は普段の生活から離れ、新たな冒険に胸を膨らませながら、江ノ島へ向かう途中の電車の窓から広がる風景を楽しむことになります。">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,10 +16,12 @@
 </head>
 <body>
 <!--下層ページヘッダー共通パーツ-->
+<div class="background"></div>
+<div class="bx-shadow content__box">
     <header id="site_header">
         <div class="header_contents">
             <p class="logo_header">
-                <a href="../index.html"><img src="../img/logo_blue.png" alt="えのしまトリップ"></a>
+                <a href="../index.html"><img src="../asset/logo_blue.png" alt="えのしまトリップ"></a>
             </p>
             <div id="menu_btn" onclick=menu__isOpened()>
                 <svg width="37" height="24" viewBox="0 0 37 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -32,12 +34,12 @@
         <div class="hamburger_menu_wrapper">
             <nav id="hamburger_menu">
                 <ul id="hamburger_menu_list">
-                    <li><a href="../index.html"><span class="en_menu">TOP</span><span>トップ</span></a></li>
-                    <li><a href="../page/photograph.html"><span class="en_menu">PHOTOGRAPH</span>ギャラリー</a></li>
-                    <li><a href="../archive/sightseeing.html"><span class="en_menu">SIGHTSEEING</span>観光スポット</a></li>
-                    <li><a href="../archive/column.html"><span class="en_menu">COLUMN</span>コラム</a></li>
-                    <li><a href="../page/about.html"><span class="en_menu">ABOUT</span>えのしまトリップとは</a></li>
-                    <li><a href="../archive/news.html"><span class="en_menu">NEWS</span>ニュース</a></li>
+                    <li><a href="../index.html" class="isHover__fade"><span class="en_menu">TOP</span><span>トップ</span></a></li>
+                    <li><a href="../page/photograph.html" class="isHover__fade"><span class="en_menu">PHOTOGRAPH</span>ギャラリー</a></li>
+                    <li><a href="../archive/sightseeing.html" class="isHover__fade"><span class="en_menu">SIGHTSEEING</span>観光スポット</a></li>
+                    <li><a href="../archive/column.html" class="isHover__fade"><span class="en_menu">COLUMN</span>コラム</a></li>
+                    <li><a href="../page/about.html" class="isHover__fade"><span class="en_menu">ABOUT</span>えのしまトリップとは</a></li>
+                    <li><a href="../archive/news.html" class="isHover__fade"><span class="en_menu">NEWS</span>ニュース</a></li>
                     <li>
                         <ul class="sns_logos">
                             <li><a href=""><img src="../asset/f_logo_RGB-Blue_58.png" alt="facebook"></a></li>
@@ -49,7 +51,6 @@
         </div>
     </header>
 <!--下層ページヘッダー共通パーツ終了-->
-    <div class="background"></div>
     <main id="main_content" class="single">
         <article>
             <header class="post__header">
@@ -165,13 +166,15 @@
             <a href="../archive/column.html" class="button border">一覧を見る</a>
         </section>
         <div class="banner">
-            <img src="../asset/banner.jpg" alt="メールマガジン登録のご案内"/>
+            <a href="" class="isHover__fade">
+                <img src="../asset/banner.jpg" alt="メールマガジン登録のご案内"/>
+            </a>
         </div>
 
     </main>
     <!--ここからフッター共通パーツ-->
     <footer id="site_footer">
-        <p class="footer_logo"><img src="../img/logo_blue.png" alt="えのしまトリップ"/></p>
+        <p class="footer_logo"><img src="../asset/logo_blue.png" alt="えのしまトリップ"/></p>
         <ul class="footer_menu"><!--aタグ適宜追加-->
             <li><a href="../archive/sightseeing.html" class="isHover__fade">観光スポット</a></li>
             <li><a href="../archive/column.html" class="isHover__fade">コラム</a></li>
@@ -188,6 +191,7 @@
         </ul>
         <small>&copy;えのしまトリップ 2023</small>
     </footer>
+</div>
     <!--ここまでフッター共通パーツ-->
     <script>
         function menu__isOpened(e){

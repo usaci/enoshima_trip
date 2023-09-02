@@ -72,6 +72,10 @@ table{
     margin-left: 10%;
 }
 
+.post__mainText ul li, .post__mainText ol li{
+    margin-bottom: 1.2em!important;
+}
+
 th, td{
     padding: 1.4rem;
     font-size: 1.4rem;
@@ -144,7 +148,7 @@ td{
 }
 
 .isHover__fade:hover{
-    opacity: 0.5;
+    opacity: 0.65;
 
 }
 .isHover__lined{
@@ -169,7 +173,7 @@ td{
 }
 
 .bx-shadow{
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 6px 3px rgba(0, 0, 0, 0.10);
 }
 
 .tx-shadow{
@@ -182,9 +186,9 @@ td{
     position: absolute;
     width: 30px;
     height: 30px;
-    background: var(--color-column);
+    background: grey;
     border-radius: 100px;
-    opacity: 0.2;
+    opacity: 0.3;
     z-index: 99999;
     transform-origin: center;
     transition: width 0.5s, height 0.5s, top 0.5s, left 0.5s;
@@ -194,6 +198,26 @@ td{
     pointer-events: none;
 }
 
+.cursorWrap{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    transform: translate(-50%, 0%);
+}
+
+.cursorWrap span{
+    position: absolute;
+}
+
+.cursorWrap span:nth-of-type(1){
+    transform: rotate(0deg);
+}
+.cursorWrap span:nth-of-type(2){
+    transform: rotate(60deg);
+}
+.cursorWrap span:nth-of-type(3){
+    transform: rotate(120deg);
+}
 .cursor.isHover{
     transition: all 0.4s;
     transform: scale(10);
@@ -230,6 +254,7 @@ p{
 
 .content__box{
     width: 100%;
+    background: var(--color-original-white);
     position: relative;
     max-width: 480px;
 }
@@ -322,7 +347,7 @@ header#site_header.is_default{
     width: 100%;
     transition: ease-out 0.3s;
     overflow-y: hidden;
-    transform: translateY(112%);
+    transform: translateY(117%);
 }
 
 #hamburger_menu.is_opened{
@@ -385,6 +410,40 @@ main{
 main.archive, main.single, main.page{
     margin-top: 100px;
 }
+
+main.page .page__mainText h2{
+    position: relative;
+    text-align: center;
+    padding: 0.8em;
+    margin-bottom: 2.2em;
+}
+
+main.single .post__mainText h2, main.single .post__mainText h3, main.single .post__mainText h4{
+    margin-bottom: 1.8em!important;
+}
+
+
+main.page .page__mainText h2:after{
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 10px;
+    background-color: var(--main-theme-color);
+    mask-image: url('data:image/svg+xml;utf-8, <svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 251.17 18"><g id="_レイヤー_1-2" data-name="レイヤー 1"><path d="m251.17,18h-2c-12.89,0-19.4-3.69-25.7-7.26-6.12-3.47-11.9-6.74-23.73-6.74s-17.61,3.27-23.73,6.74c-6.3,3.57-12.82,7.26-25.7,7.26s-19.4-3.69-25.7-7.26c-6.12-3.47-11.9-6.74-23.73-6.74s-17.61,3.27-23.73,6.74c-6.3,3.57-12.82,7.26-25.7,7.26s-19.4-3.69-25.7-7.26c-6.12-3.47-11.9-6.74-23.73-6.74H0V0h2c12.88,0,19.4,3.69,25.7,7.26,6.12,3.47,11.9,6.74,23.73,6.74s17.61-3.27,23.73-6.74c6.3-3.57,12.82-7.26,25.7-7.26s19.4,3.69,25.7,7.26c6.12,3.47,11.9,6.74,23.73,6.74s17.61-3.27,23.73-6.74c6.3-3.57,12.82-7.26,25.7-7.26s19.4,3.69,25.7,7.26c6.12,3.47,11.9,6.74,23.73,6.74h2v4Z"/></g></svg>');
+    mask-repeat: no-repeat;
+    mask-position: 0 0;
+    mask-size: 100%;
+    -webkit-mask-image: url('data:image/svg+xml;utf-8, <svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 251.17 18"><g id="_レイヤー_1-2" data-name="レイヤー 1"><path d="m251.17,18h-2c-12.89,0-19.4-3.69-25.7-7.26-6.12-3.47-11.9-6.74-23.73-6.74s-17.61,3.27-23.73,6.74c-6.3,3.57-12.82,7.26-25.7,7.26s-19.4-3.69-25.7-7.26c-6.12-3.47-11.9-6.74-23.73-6.74s-17.61,3.27-23.73,6.74c-6.3,3.57-12.82,7.26-25.7,7.26s-19.4-3.69-25.7-7.26c-6.12-3.47-11.9-6.74-23.73-6.74H0V0h2c12.88,0,19.4,3.69,25.7,7.26,6.12,3.47,11.9,6.74,23.73,6.74s17.61-3.27,23.73-6.74c6.3-3.57,12.82-7.26,25.7-7.26s19.4,3.69,25.7,7.26c6.12,3.47,11.9,6.74,23.73,6.74s17.61-3.27,23.73-6.74c6.3-3.57,12.82-7.26,25.7-7.26s19.4,3.69,25.7,7.26c6.12,3.47,11.9,6.74,23.73,6.74h2v4Z"/></g></svg>');
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: 0 0;
+    -webkit-mask-size: 100%;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    bottom: -30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .key_visual{
     position: relative;
     display: flex;
@@ -406,9 +465,9 @@ main.archive, main.single, main.page{
     width: 100%;
     height: 100%;
     overflow: hidden;
-    background-image: url(./img/key_visual.png); 
+    background-image: url(../img/key_visual.png); 
     background-size: cover;
-    z-index: -1;
+    z-index: 0;
     pointer-events: none;
 }
 
@@ -488,7 +547,6 @@ h2.heading_cursive:after{
     -webkit-mask-repeat: no-repeat;
     -webkit-mask-position: 0 0;
     -webkit-mask-size: 100%;
-    
     vertical-align: middle;
     background-repeat: no-repeat;
     bottom: -30%;
@@ -841,7 +899,7 @@ footer{
 footer img{
     display: block;
     margin: 0 auto;
-    width: 44%;
+    width: 14rem;
 }
 .footer_menu{
     width: 100%;
@@ -850,6 +908,10 @@ footer img{
     flex-wrap: wrap;
     justify-content: center;
 
+}
+
+footer ul.sns_logos{
+    margin: 0;
 }
 
 footer .sns_logos li{
@@ -926,11 +988,16 @@ main.single .post__header, main.page .page__header{
     padding: 12px 20px;
 }
 
+main.page .page_block{
+    margin-bottom: 4.2rem!important;
+}
+
 main.single .post__mainText, main.page .page__mainText{
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
     padding: 64px 20px;
+}
+
+main.single .post__mainText *, main.page .page__mainText *{
+    margin-bottom: 2.4rem;
 }
 
 main.single .post__footer,main.page .page__mainText{
@@ -954,6 +1021,18 @@ border-bottom: 1px solid var(--main-skyblue, #1057AA);
 
 }
 
+.img_block{
+    display: flex;
+    flex-direction: row;
+}
+
+.img-item.column3{
+    width: calc(100% / 3);
+    aspect-ratio: 2 / 3;
+}
+.img_block img{
+    width: 100%;
+}
 /* photo */
 
 header#site_header.header__photograph{
@@ -993,7 +1072,7 @@ article{
 }
 
 .photo_ttl{
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     font-weight: 600;
     text-align: justify;
 }
@@ -1221,6 +1300,7 @@ article{
     transform: translateY(-50%);
     top: 50%;
     right: 0;
+    font-family: "Raleway";
 }
 .scroll_hint{
 

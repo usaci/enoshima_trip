@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="ja">
     <head>
-        <title>えのしまトリップ</title>
+        <title>ニュース | えのしまトリップ</title>
+        <link rel="shortcut icon" href="../asset/favicon.ico" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="えのしまトリップは、江ノ島の耳寄り情報をお届けするWebマガジンです。">
+        <meta name="description" content="えのしまトリップからのお知らせを表示します。">
         <link rel="stylesheet" href="../css/style.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,11 +16,13 @@
         <script src="https://kit.fontawesome.com/710f60ac35.js" crossorigin="anonymous"></script>
     </head>
     <body>
-    <!--下層ページヘッダー共通パーツ-->
+    <div class="cursor"></div>
+    <div class="background"></div>
+    <div class="bx-shadow content__box">
         <header id="site_header">
             <div class="header_contents">
                 <p class="logo_header">
-                    <a href="../index.html"><img src="../img/logo_blue.png" alt="えのしまトリップ"></a>
+                    <a href="../index.html"><img src="../asset/logo_blue.png" alt="えのしまトリップ"></a>
                 </p>
                 <div id="menu_btn" onclick=menu__isOpened()>
                     <svg width="37" height="24" viewBox="0 0 37 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +52,6 @@
             </div>
         </header>
 <!--ここからヘッダー共通パーツ-->
-    <div class="background"></div>
     <main id="main_content" class="archive">
         <article>
             <section class="news" id="news">
@@ -120,14 +122,16 @@
 
 
             <div class="banner">
-                <img src="../asset/banner.jpg" alt="メールマガジン登録のご案内"/>
+                <a href="" class="isHover__fade">
+                    <img src="../asset/banner.jpg" alt="メールマガジン登録のご案内"/>
+                </a>
             </div>
 
 
         </article>
     </main>
     <footer id="site_footer">
-        <p class="footer_logo"><img src="../img/logo_blue.png" alt="えのしまトリップ"/></p>
+        <p class="footer_logo"><img src="../asset/logo_blue.png" alt="えのしまトリップ"/></p>
         <ul class="footer_menu"><!--aタグ適宜追加-->
             <li>観光スポット</li>
             <li>コラム</li>
@@ -144,33 +148,10 @@
         </ul>
         <small>&copy;えのしまトリップ 2023</small>
     </footer>
-    <script>
-        function menu__isOpened(e){
-            //ハンバーガーメニューの挙動制御
-            const hamburger = document.querySelectorAll('#hamburger_menu_list li');
-            var e = document.getElementById('menu_btn');
-            const menu = document.getElementById('hamburger_menu');
-            if(!menu.classList.contains('is_opened')){
-                menu.classList.add('is_opened');
-                document.body.classList.add('is_fixed');
-                console.log('is_opened');
-                hamburger.forEach((e)=>{
-                    e.classList.add('is_animated');
-
-                })
-            }else{
-                menu.classList.remove('is_opened');
-                document.body.classList.remove('is_fixed');
-                console.log('is_closed');
-                hamburger.forEach((e)=>{
-                    e.classList.remove('is_animated');
-                })
-                
-            }
-            console.log(e);
-        }
-
-    </script>
+    </div>
+<!--ここまでフッター共通パーツ-->
+<script type="text/javascript" src="../js/header.js"></script>
+<script type="text/javascript" src="../js/stickCursor.js"></script>
     
 </body>
 </html>

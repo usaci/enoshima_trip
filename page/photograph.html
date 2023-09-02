@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <title>えのしまトリップ</title>
+    <title>ギャラリー | えのしまトリップ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="えのしまトリップは、江ノ島の耳寄り情報をお届けするWebマガジンです。">
+    <meta name="description" content="江ノ島の風景を写真でお届けします。">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="../asset/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&family=Sacramento&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <script src="https://kit.fontawesome.com/710f60ac35.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="cursor"></div>
+    <div class="background"></div>
+    <div class="content__box">
 <!--ここからヘッダー共通パーツ-->
     <header id="site_header" class="header__photograph">
         <div class="header_contents">
             <p class="logo_header">
-                <a href="../index.html"><img src="./img/logo_blue.png" alt="えのしまトリップ"></a>
+                <a href="../index.html"><img src="../asset/logo_blue.png" alt="えのしまトリップ"></a>
             </p>
             <div id="menu_btn" onclick=menu__isOpened()>
                 <svg width="37" height="24" viewBox="0 0 37 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -33,12 +36,12 @@
         <div class="hamburger_menu_wrapper">
             <nav id="hamburger_menu">
                 <ul id="hamburger_menu_list">
-                    <li><a href="../index.html"><span class="en_menu">TOP</span><span>トップ</span></a></li>
-                    <li><a href="../page/photograph.html"><span class="en_menu">PHOTOGRAPH</span>ギャラリー</a></li>
-                    <li><a href="../archive/sightseeing.html"><span class="en_menu">SIGHTSEEING</span>観光スポット</a></li>
-                    <li><a href="../archive/column.html"><span class="en_menu">COLUMN</span>コラム</a></li>
-                    <li><a href="../page/about.html"><span class="en_menu">ABOUT</span>えのしまトリップとは</a></li>
-                    <li><a href="../archive/news.html"><span class="en_menu">NEWS</span>ニュース</a></li>
+                    <li><a href="../index.html" class="isHover__fade"><span class="en_menu">TOP</span><span>トップ</span></a></li>
+                    <li><a href="../page/photograph.html" class="isHover__fade"><span class="en_menu">PHOTOGRAPH</span>ギャラリー</a></li>
+                    <li><a href="../archive/sightseeing.html" class="isHover__fade"><span class="en_menu">SIGHTSEEING</span>観光スポット</a></li>
+                    <li><a href="../archive/column.html" class="isHover__fade"><span class="en_menu">COLUMN</span>コラム</a></li>
+                    <li><a href="../page/about.html" class="isHover__fade"><span class="en_menu">ABOUT</span>えのしまトリップとは</a></li>
+                    <li><a href="../archive/news.html" class="isHover__fade"><span class="en_menu">NEWS</span>ニュース</a></li>
                     <li>
                         <ul class="sns_logos">
                             <li><a href="" class="isHover__fade"><img src="../asset/f_logo_RGB-Blue_58.png" alt="facebook"></a></li>
@@ -76,7 +79,7 @@
                     </div>
 
                     <div class="sec_ttl">
-                        <p class="cursive">Benzaiten Nakamise Street</p>
+                        <p class="cursive">Street</p>
                         <p class="set_ttl_img"><img src="../img/benzaiten.png" alt="弁財天仲見世通り"/></p>
                         <p class="sec_desc">江ノ島の玄関口</p>
                         <p class="sec_desc">自由気ままに散策しよう</p>
@@ -118,7 +121,7 @@
                         </div>
                         
                         <div class="sec_ttl right">
-                            <p class="cursive">Enoshima shrine</p>
+                            <p class="cursive">Shrine</p>
                             <p class="sec_ttl_img"><img src="../img/enoshima_shrine_cal.png" alt="江島神社"/></p>
                             <p class="sec_desc">日本三大弁財天を奉る</p>
                             <p class="sec_desc">江ノ島の守り神</p>
@@ -139,7 +142,7 @@
                             <div class="row-01">
                                 <div class="photoItem sec06__photo_child num-01"><img src="../img/Samel_02.png" alt=""></div>
                                 <div class="photoItem sec06__photo_child num-02"><img src="../img/Samel_03.png" alt=""></div>
-                                <div class="photoItem sec06__photo_child num-03"><img src="./img/Samel_05.png" alt=""></div>
+                                <div class="photoItem sec06__photo_child num-03"><img src="../img/Samel_05.png" alt=""></div>
                             </div>
                             <div class="row-02">
                                 <div class="photoItem sec06__photo_child num-04"><img src="../img/Samel_01.png" alt=""></div>
@@ -189,17 +192,19 @@
                 <a href="../index.html" class="button">トップページに戻る</a>
             </div>
             <div class="banner">
-                <img src="../img/banner.png" alt="メールマガジン登録のご案内"/>
+                <a href="" class="isHover__fade">
+                    <img src="../asset/banner.jpg" alt="メールマガジン登録のご案内"/>
+                </a>
             </div>
         </article>
     </main>
     <!--ここからフッター共通パーツ-->
     <footer id="site_footer">
-        <p class="footer_logo"><img src="./img/logo_blue.png" alt="えのしまトリップ"/></p>
+        <p class="footer_logo"><img src="../asset/logo_blue.png" alt="えのしまトリップ"/></p>
         <ul class="footer_menu"><!--aタグ適宜追加-->
-            <li><a href="./archive/sightseeing.html" class="isHover__fade">観光スポット</a></li>
-            <li><a href="./archive/column.html" class="isHover__fade">コラム</a></li>
-            <li><a href="./page/photograph.html" class="isHover__fade">ギャラリー</a></li>
+            <li><a href="../archive/sightseeing.html" class="isHover__fade">観光スポット</a></li>
+            <li><a href="../archive/column.html" class="isHover__fade">コラム</a></li>
+            <li><a href="../page/photograph.html" class="isHover__fade">ギャラリー</a></li>
             <li><a href="" class="isHover__fade">えのしまトリップとは</a></li>
             <li><a href="" class="isHover__fade">江ノ島へのアクセス</a></li>
             <li><a href="" class="isHover__fade">メールマガジン</a></li>
@@ -207,13 +212,15 @@
             <li><a href="" class="isHover__fade">お問い合わせ</a></li>
         </ul>
         <ul class="sns_logos">
-            <li><a href=""><img src="./asset/f_logo_RGB-Blue_58.png" alt="facebook"></a></li>
-            <li><a href=""><img src="./asset/Instagram_Glyph_Gradient.png" alt="Instagram"></a></li>
+            <li><a href=""><img src="../asset/f_logo_RGB-Blue_58.png" alt="facebook"></a></li>
+            <li><a href=""><img src="../asset/Instagram_Glyph_Gradient.png" alt="Instagram"></a></li>
         </ul>
         <small>&copy;えのしまトリップ 2023</small>
     </footer>
+    </div>
     <!--ここまでフッター共通パーツ-->
     <script type="text/javascript" src="../js/header.js"></script>
+    <script type="text/javascript" src="../js/stickCursor.js"></script>
     <script>
 
         //画像・タイトルのクラスとしてis__hiddenをセット
@@ -246,17 +253,17 @@
                 
             }})
 
-            window.addEventListener('scroll', ()=>{
-            if(window.scrollY < (keyVisual.clientHeight)){
+            menu.addEventListener('click', ()=>{
+                var current = window.scrollY;
+                if(current< keyVisual.clientHeight){
+                    if(menu.classList.contains('is_white')){
+                        menu.classList.remove('is_white');
+                    }else{
+                        menu.classList.add('is_white');
+                    } 
+                }
+            })
 
-                menu.addEventListener('click', ()=>{
-                console.log("helllo");
-                if(menu.classList.contains('is_white')){
-                    menu.classList.remove('is_white');
-                }else{
-                    menu.classList.add('is_white');
-                } })
-            }})
         }
 
 
@@ -291,27 +298,6 @@
 
         }
         scrollAnimation();
-
-        //カーソルが追従する
-        const cursor = document.querySelector('.cursor');
-        document.addEventListener('mousemove', (e)=>{
-            cursor.style.transform = 'translate(' + e.clientX + 'px, ' + parseInt( window.scrollY + e.clientY ) + 'px)';
-            console.log(window.scrollY);
-        })
-
-        //aタグにカーソルを重ねたときにカーソルを大きくする
-        const anchor = document.querySelectorAll('a');
-        anchor.forEach((e)=>{
-            
-            e.addEventListener('mouseover', ()=>{
-                cursor.classList.add('isHover');
-                console.log(e);
-            })
-            e.addEventListener('mouseout', ()=>{
-                cursor.classList.remove('isHover');
-                console.log('out!');
-            })
-        })
 
     </script>
     

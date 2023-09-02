@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <title>えのしまトリップ</title>
+    <title>えのしまトリップとは | えのしまトリップ</title>
+    <link rel="shortcut icon" href="../asset/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="えのしまトリップは、江ノ島の耳寄り情報をお届けするWebマガジンです。">
     <link rel="stylesheet" href="../css/style.css">
@@ -15,11 +16,14 @@
     <script src="https://kit.fontawesome.com/710f60ac35.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<div class="cursor"></div>
+<div class="background"></div>
+<div class="bx-shadow content__box">
 <!--下層ページヘッダー共通パーツ-->
     <header id="site_header">
         <div class="header_contents">
             <p class="logo_header">
-                <a href="../index.html"><img src="../img/logo_blue.png" alt="えのしまトリップ"></a>
+                <a href="../index.html"><img src="../asset/logo_blue.png" alt="えのしまトリップ"></a>
             </p>
             <div id="menu_btn" onclick=menu__isOpened()>
                 <svg width="37" height="24" viewBox="0 0 37 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -49,38 +53,60 @@
         </div>
     </header>
 <!--下層ページヘッダー共通パーツ終了-->
-    <div class="background"></div>
     <main id="main_content" class="page">
         <article>
             <header class="page__header">
                 <h2 class="photo_ttl vertical tx-shadow">えのしまトリップとは</h2>
             </header>
             <section class="page__mainText">
-                <h1>タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h1>
-                <h2>h2見出しh2見出しh2見出しh2見出しh2見出し</h2>
+                <section class="page_block sec01">
+                    <h2>えのしまトリップとは</h2>
+                    <p>
+                        えのしまトリップは、江ノ島の耳寄り情報をお届けするWebマガジンです。
+                    </p>
+                </section>
+
+                <section class="page_block sec02">
+                    <h2>私たちのおもい</h2>
+                    <img src="../img/enoshima_other2.png" alt="">
                 <p>
-                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                    江ノ島は全国的に有名な観光名所であり、藤沢市の統計によると年間約1700万人が江ノ島を訪れています。*1
                 </p>
-                <h3>h3見出しh3見出しh3見出しh3見出しh3見出し</h3>
                 <p>
-                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。
+                    しかし、江ノ島にはまだまだ「知られていない顔」があるのではないかと私たちは考えます。<br>
+                    皆さんは、歩いて江ノ島の島内を1周したことがありますか。江ノ島で生活を営んでいる人々のことを知っていますか。<br>
+                    私たちは、江ノ島の「知られていない顔」を知ってもらうために、えのしまトリップを創刊しました。
                 </p>
-                <h4>h4見出しh4見出しh4見出しh4見出しh4見出し</h4>
-                <p>
-                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                    本文が入ります。本文が入ります。本文が入ります。本文が入ります。
-                </p>
+                <p><small>*藤沢市観光公式ホームページ「観光客統計」<br>https://www.fujisawa-kanko.jp/global-image/units/upfiles/75364-1-20230601164754_b64784d2a044b6.pdf </small></p>
+                </section>
+                <section class="page_block sec04">
+                    <h2>運営会社</h2>
+                    <table>
+                        <tr>
+                            <th>運営会社</th>
+                            <td>株式会社〇〇〇〇</td>
+                        </tr>
+                        <tr>
+                            <th>住所</th>
+                            <td>神奈川県藤沢市xx-xx</td>
+                        </tr>
+                        <tr>
+                            <th>電話番号</th>
+                            <td>000-0000-0000</td>
+                        </tr>
+                        <tr>
+                            <th>メールアドレス</th>
+                            <td>info@xxx.com</td>
+                        </tr>
+                    </table>
+                </section>
+
             </section>
         </article>
 
         <div class="banner">
-            <a href="">
-                <img src="../asset/banner.jpg" alt="メールマガジン登録のご案内" class="isHover__fade"/>
+            <a href="" class="isHover__fade">
+                <img src="../asset/banner.jpg" alt="メールマガジン登録のご案内"/>
             </a>
         </div>
 
@@ -88,7 +114,7 @@
     <!--ここからフッター共通パーツ-->
     <!--ここからフッター共通パーツ-->
     <footer id="site_footer">
-        <p class="footer_logo"><img src="../img/logo_blue.png" alt="えのしまトリップ"/></p>
+        <p class="footer_logo"><img src="../asset/logo_blue.png" alt="えのしまトリップ"/></p>
         <ul class="footer_menu"><!--aタグ適宜追加-->
             <li><a href="../archive/sightseeing.html" class="isHover__fade">観光スポット</a></li>
             <li><a href="../archive/column.html" class="isHover__fade">コラム</a></li>
@@ -106,34 +132,9 @@
         <small>&copy;えのしまトリップ 2023</small>
     </footer>
     <!--ここまでフッター共通パーツ-->
-    <!--ここまでフッター共通パーツ-->
-    <script>
-        function menu__isOpened(e){
-            //ハンバーガーメニューの挙動制御
-            const hamburger = document.querySelectorAll('#hamburger_menu_list li');
-            var e = document.getElementById('menu_btn');
-            const menu = document.getElementById('hamburger_menu');
-            if(!menu.classList.contains('is_opened')){
-                menu.classList.add('is_opened');
-                document.body.classList.add('is_fixed');
-                console.log('is_opened');
-                hamburger.forEach((e)=>{
-                    e.classList.add('is_animated');
-
-                })
-            }else{
-                menu.classList.remove('is_opened');
-                document.body.classList.remove('is_fixed');
-                console.log('is_closed');
-                hamburger.forEach((e)=>{
-                    e.classList.remove('is_animated');
-                })
-                
-            }
-            console.log(e);
-        }
-
-    </script>
-    
+</div>
+<!--ここまでフッター共通パーツ-->
+<script type="text/javascript" src="../js/header.js"></script>
+<script type="text/javascript" src="../js/stickCursor.js"></script>
 </body>
 </html>

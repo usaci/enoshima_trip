@@ -42,6 +42,10 @@ body{
 
 }
 
+h1{
+    font-size: 2.4rem;
+}
+
 h2{
     font-size: 2rem;
     font-family: 600;
@@ -685,10 +689,16 @@ p.heading_desc{
     width: 100%;
 }
 
+
 .sns_logos{
     display: flex;
     color: var(--main-theme-color);
     gap: 48px;
+    margin-top: 24px;
+}
+
+.post__footer .sns_logos{
+    justify-content: center;
 }
 
 .sns_logos img{
@@ -798,6 +808,14 @@ nav#hamburger_menu .sns_logos{
 .news .button{
     color: white;
 }
+
+main.single .post__header.news{
+    height: 100%;
+    padding: 4em;
+    background: url('../img/miharashi.jpg');
+    color: var(--color-original-white);
+}
+
 
 footer{
     background: white;

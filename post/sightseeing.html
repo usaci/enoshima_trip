@@ -4,7 +4,7 @@
     <title>えのしまトリップ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="えのしまトリップは、江ノ島の耳寄り情報をお届けするWebマガジンです。">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
@@ -15,47 +15,48 @@
     <script src="https://kit.fontawesome.com/710f60ac35.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-    <header id="site_header">
-        <div class="header_contents">
-            <p class="logo_header">
-                <a href="./index.html"><img src="./img/logo_blue.png" alt="えのしまトリップ"></a>
-            </p>
-            <div id="menu_btn" onclick=menu__isOpened()>
-                <svg width="37" height="24" viewBox="0 0 37 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <line y1="0.5" x2="36.1429" y2="0.5" stroke="#1057AA"/>
-                    <line x1="9.85693" y1="12" x2="36.1426" y2="12" stroke="#1057AA"/>
-                    <line x1="19.7144" y1="23.5" x2="36.1429" y2="23.5" stroke="#1057AA"/>
-                </svg>
-            </div>
+<!--下層ページヘッダー共通パーツ-->
+<header id="site_header">
+    <div class="header_contents">
+        <p class="logo_header">
+            <a href="../index.html"><img src="../img/logo_blue.png" alt="えのしまトリップ"></a>
+        </p>
+        <div id="menu_btn" onclick=menu__isOpened()>
+            <svg width="37" height="24" viewBox="0 0 37 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line y1="0.5" x2="36.1429" y2="0.5" stroke="#1057AA"/>
+                <line x1="9.85693" y1="12" x2="36.1426" y2="12" stroke="#1057AA"/>
+                <line x1="19.7144" y1="23.5" x2="36.1429" y2="23.5" stroke="#1057AA"/>
+            </svg>
         </div>
-        <div class="hamburger_menu_wrapper">
-            <nav id="hamburger_menu">
-                <ul id="hamburger_menu_list">
-                    <li><a href="./index.html"><span class="en_menu">TOP</span><span>トップ</span></a></li>
-                    <li><a href="./photograph.html"><span class="en_menu">PHOTOGRAPH</span>ギャラリー</a></li>
-                    <li><a href="./sightseeing.html"><span class="en_menu">SIGHTSEEING</span>観光スポット</a></li>
-                    <li><a href="./column.html"><span class="en_menu">COLUMN</span>コラム</a></li>
-                    <li><a href="./about.html"><span class="en_menu">ABOUT</span>えのしまトリップとは</a></li>
-                    <li><a href="./news.html"><span class="en_menu">NEWS</span>ニュース</a></li>
-                    <li>
-                        <ul class="sns_logos">
-                            <li><a href=""><img src="./asset/f_logo_RGB-Blue_58.png" alt="facebook"></a></li>
-                            <li><a href=""><img src="./asset/Instagram_Glyph_Gradient.png" alt="Instagram"></a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    </div>
+    <div class="hamburger_menu_wrapper">
+        <nav id="hamburger_menu">
+            <ul id="hamburger_menu_list">
+                <li><a href="../index.html"><span class="en_menu">TOP</span><span>トップ</span></a></li>
+                <li><a href="../page/photograph.html"><span class="en_menu">PHOTOGRAPH</span>ギャラリー</a></li>
+                <li><a href="../archive/sightseeing.html"><span class="en_menu">SIGHTSEEING</span>観光スポット</a></li>
+                <li><a href="../archive/column.html"><span class="en_menu">COLUMN</span>コラム</a></li>
+                <li><a href="../page/about.html"><span class="en_menu">ABOUT</span>えのしまトリップとは</a></li>
+                <li><a href="../archive/news.html"><span class="en_menu">NEWS</span>ニュース</a></li>
+                <li>
+                    <ul class="sns_logos">
+                        <li><a href=""><img src="../asset/f_logo_RGB-Blue_58.png" alt="facebook"></a></li>
+                        <li><a href=""><img src="../asset/Instagram_Glyph_Gradient.png" alt="Instagram"></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!--下層ページヘッダー共通パーツ終了-->
     <div class="background"></div>
     <main id="main_content" class="single">
         <article>
             <header class="post__header">
                 <article class="article_card sightseeing">
-                    <a href="./single-sightseeing.html">
+                    <a href="../post/sightseeing.html">
                         <p class="cat">スポット</p>
-                        <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
+                        <img src="../img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
                         <div class="article_detail">
                             <p class="locate">江ノ島島内</p>
                             <h3 class="article_ttl">日本三代弁財天を祀る<br>江ノ島の守り神</h3>
@@ -71,7 +72,7 @@
                 <p>日本三大弁天の一つに数えられています。</p>
                 <h3>どのようなご利益があるのか</h3>
                 
-                <img src="./img/benzaiten_01.png" alt="江島神社 弁財天">
+                <img src="../img/benzaiten_01.png" alt="江島神社 弁財天">
 
                 <p>江島神社は、3つの杜からなります。</p>
                 <ul>
@@ -106,8 +107,8 @@
             <footer class="post__footer">
                 <p class="post__share">SNSで共有する</p>
                 <ul class="sns_logos">
-                    <li><a href="" class="isHover__fade"><img src="./asset/f_logo_RGB-Black_58.png" alt="facebook"></a></li>
-                    <li><a href="" class="isHover__fade"><img src="./asset/Instagram_Glyph_Black.png" alt="Instagram"></a></li>
+                    <li><a href="" class="isHover__fade"><img src="../asset/f_logo_RGB-Blue_58.png" alt="facebook"></a></li>
+                    <li><a href="" class="isHover__fade"><img src="../asset/Instagram_Glyph_Gradient.png" alt="Instagram"></a></li>
                 </ul>
             </footer>
         </article>
@@ -127,7 +128,7 @@
                     </article>
                     <article class="article_card sightseeing shadow-wt">
                         <p class="cat">スポット</p>
-                        <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
+                        <img src="../img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
                         <div class="article_detail">
                             <p class="locate">江ノ島島内</p>
                             <h3 class="article_ttl">日本三代弁財天を祀る<br>江ノ島の守り神</h3>
@@ -171,17 +172,18 @@
         </div>
 
     </main>
+    <!--ここからフッター共通パーツ-->
     <footer id="site_footer">
         <p class="footer_logo"><img src="./img/logo_blue.png" alt="えのしまトリップ"/></p>
         <ul class="footer_menu"><!--aタグ適宜追加-->
-            <li>観光スポット</li>
-            <li>コラム</li>
-            <li>ギャラリー</li>
-            <li>えのしまトリップとは</li>
-            <li>江ノ島へのアクセス</li>
-            <li>メールマガジン</li>
-            <li>ライター採用</li>
-            <li>お問い合わせ</li>
+            <li><a href="./archive/sightseeing.html" class="isHover__fade">観光スポット</a></li>
+            <li><a href="./archive/column.html" class="isHover__fade">コラム</a></li>
+            <li><a href="./page/photograph.html" class="isHover__fade">ギャラリー</a></li>
+            <li><a href="" class="isHover__fade">えのしまトリップとは</a></li>
+            <li><a href="" class="isHover__fade">江ノ島へのアクセス</a></li>
+            <li><a href="" class="isHover__fade">メールマガジン</a></li>
+            <li><a href="" class="isHover__fade">ライター採用</a></li>
+            <li><a href="" class="isHover__fade">お問い合わせ</a></li>
         </ul>
         <ul class="sns_logos">
             <li><a href=""><img src="./asset/f_logo_RGB-Blue_58.png" alt="facebook"></a></li>
@@ -189,6 +191,7 @@
         </ul>
         <small>&copy;えのしまトリップ 2023</small>
     </footer>
+    <!--ここまでフッター共通パーツ-->
     <script>
         function menu__isOpened(e){
             //ハンバーガーメニューの挙動制御

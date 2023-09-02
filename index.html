@@ -4,7 +4,7 @@
     <title>えのしまトリップ</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="えのしまトリップは、江ノ島の耳寄り情報をお届けするWebマガジンです。">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel=”icon” href=“/img/logo.png”>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +18,18 @@
 <body>
 
     <div class="cursor"></div>
+    <div id="site_loader" class>
+        <div class="logo_wrap">
+            <video src="./asset/logo_loader.mp4" autoplay muted></video>
+            <p class="tx-shadow">江ノ島の情報をお届けする<br>Webマガジン</p>
+        </div>
+    </div>
+    <div class="background"></div>
+    <script>
+        const loader = document.getElementById('site_loader');
+        loader.classList.add('is_loading');
+    </script>
+<div class="bx-shadow content__box">
     <header id="site_header">
         <div class="header_contents">
             <p class="logo_header">
@@ -35,52 +47,58 @@
             <nav id="hamburger_menu">
                 <ul id="hamburger_menu_list">
                     <li><a href="./index.html"><span class="en_menu">TOP</span><span>トップ</span></a></li>
-                    <li><a href="./photograph.html"><span class="en_menu">PHOTOGRAPH</span>ギャラリー</a></li>
-                    <li><a href="./sightseeing.html"><span class="en_menu">SIGHTSEEING</span>観光スポット</a></li>
-                    <li><a href="./column.html"><span class="en_menu">COLUMN</span>コラム</a></li>
-                    <li><a href="./about.html"><span class="en_menu">ABOUT</span>えのしまトリップとは</a></li>
-                    <li><a href="./news.html"><span class="en_menu">NEWS</span>ニュース</a></li>
+                    <li><a href="./page/photograph.html"><span class="en_menu">PHOTOGRAPH</span>ギャラリー</a></li>
+                    <li><a href="./archive/sightseeing.html"><span class="en_menu">SIGHTSEEING</span>観光スポット</a></li>
+                    <li><a href="./archive/column.html"><span class="en_menu">COLUMN</span>コラム</a></li>
+                    <li><a href="./page/about.html"><span class="en_menu">ABOUT</span>えのしまトリップとは</a></li>
+                    <li><a href="./archive/news.html"><span class="en_menu">NEWS</span>ニュース</a></li>
                     <li>
                         <ul class="sns_logos">
-                            <li><i class="fa-brands fa-x-twitter"></i></li>
-                            <li><i class="fa-brands fa-instagram"></i></li>
-                            <li><i class="fa-brands fa-facebook"></i></li>
+                            <li><a href="" class="isHover__fade"><img src="./asset/f_logo_RGB-Blue_58.png" alt="facebook"></a></li>
+                            <li><a href="" class="isHover__fade"><img src="./asset/Instagram_Glyph_Gradient.png" alt="Instagram"></a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
-    <div class="background"></div>
     <aside class="side_navigation">
         <ul>
-            <li><a href="#recommend">おすすめ記事</a></li>
-            <li><a href="#photograph">ギャラリー</a></li>
-            <li><a href="#sightseeing">江ノ島の観光名所</a></li>
-            <li><a href="#column">江ノ島とくらし</a></li>
-            <li><a href="#news">ニュース</a></li>
+            <li><a href="#recommend" class="isHover__lined">おすすめ記事</a></li>
+            <li><a href="#photograph" class="isHover__lined">ギャラリー</a></li>
+            <li><a href="#sightseeing" class="isHover__lined">江ノ島の観光名所</a></li>
+            <li><a href="#column" class="isHover__lined">江ノ島とくらし</a></li>
+            <li><a href="#news" class="isHover__lined">ニュース</a></li>
         </ul>
     </aside>
     <main id="main_content">
         <article>
-            <section class="key_visual">
+            <div class="key_visual">
+                <div id="bg-video">
+                    <video src="./video/keyvisual.mp4" autoplay loop muted></video>
+                </div>
+                <div class="video_overlay"></div>
+                <div class="logo_wrap">
                     <img src="./img/logo.png" alt="えのしまトリップ">
                     <p>江ノ島の情報をお届けする<br>Webマガジン</p>
-                    <div class="scroll_hint_wrapper"><p class="scroll_hint">Scroll</p></div>
-            </section>
+                </div>
+                <div class="scroll_hint_wrapper"><p class="scroll_hint">Scroll</p></div>
+            </div>
             <section id="recommend" class="recommend">
                 <h2 class="heading_cursive">Recommend</h2>
                 <p class="heading_desc">編集部おすすめ記事</p>
                 <div class="article_cards_list">
                     <div class="article_cards_wrapper">
                         <article class="article_card sightseeing">
-                            <p class="cat">スポット</p>
-                            <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
-                            <div class="article_detail">
-                                <p class="locate">江ノ島島内</p>
-                                <h3 class="article_ttl">日本三代弁財天を祀る<br>江ノ島の守り神</h3>
-                                <p class="spot_name">江島神社</p>
-                            </div>
+                            <a href="./post/sightseeing.html">
+                                <p class="cat">スポット</p>
+                                <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
+                                <div class="article_detail">
+                                    <p class="locate">江ノ島島内</p>
+                                    <h3 class="article_ttl">日本三代弁財天を祀る<br>江ノ島の守り神</h3>
+                                    <p class="spot_name">江島神社</p>
+                                </div>
+                            </a>
                         </article>
                         <article class="article_card column">
                             <p class="cat">コラム</p>
@@ -92,13 +110,15 @@
                             </div>
                         </article>
                         <article class="article_card sightseeing">
-                            <p class="cat">スポット</p>
-                            <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
-                            <div class="article_detail">
-                                <p class="locate">江ノ島島内</p>
-                                <h3 class="article_ttl">日本三代弁財天を祀る<br>江ノ島の守り神</h3>
-                                <p class="spot_name">江島神社</p>
-                            </div>
+                            <a href="./post/sightseeing.html">
+                                <p class="cat">スポット</p>
+                                <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
+                                <div class="article_detail">
+                                    <p class="locate">江ノ島島内</p>
+                                    <h3 class="article_ttl">日本三代弁財天を祀る<br>江ノ島の守り神</h3>
+                                    <p class="spot_name">江島神社</p>
+                                </div>
+                            </a>
                         </article>
                         <article class="article_card column">
                             <p class="cat">コラム</p>
@@ -110,13 +130,15 @@
                             </div>
                         </article>
                         <article class="article_card sightseeing">
-                            <p class="cat">スポット</p>
-                            <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
-                            <div class="article_detail">
-                                <p class="locate">江ノ島島内</p>
-                                <h3 class="article_ttl">日本三代弁財天を祀る<br>江ノ島の守り神</h3>
-                                <p class="spot_name">江島神社</p>
-                            </div>
+                            <a href="./post/sightseeing.html">
+                                <p class="cat">スポット</p>
+                                <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
+                                <div class="article_detail">
+                                    <p class="locate">江ノ島島内</p>
+                                    <h3 class="article_ttl">日本三代弁財天を祀る<br>江ノ島の守り神</h3>
+                                    <p class="spot_name">江島神社</p>
+                                </div>
+                            </a>
                         </article>
                     </div>
                 </div>
@@ -126,64 +148,75 @@
                 <h2 class="heading_cursive">Photograph</h2>
                 <p class="heading_desc vertical">写真で感じる<br>江ノ島</p>
                 <p>江ノ島の風景を写真でお届けします。</p>
-                <a href="./photograph.html" class="button border">一覧を見る</a>
+                <a href="./page/photograph.html" class="button border">一覧を見る</a>
             </section>
 
             <section class="sightseeing" id="sightseeing">
                 <h2 class="heading_cursive">Sightseeing</h2>
                 <p class="heading_desc">江ノ島の観光名所</p>
                 <div class="article_cards_list">
-                    <div class="slider_btn left"></div>
+                    <div class="slider_btn left" id="slider_btn__left01"><i class="fa-sharp fa-solid fa-chevron-left"></i></div>
+                    <div class="slider_btn right" id="slider_btn__right01"><i class="fa-sharp fa-solid fa-chevron-right"></i></div>
                     <div class="article_cards_wrapper">
                         <article class="article_card sightseeing shadow-wt">
-                            <p class="cat">スポット</p>
-                            <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
-                            <div class="article_detail">
-                                <p class="locate">江ノ島島内</p>
-                                <h3 class="article_ttl">日本三代弁財天を祀る<br>江ノ島の守り神</h3>
-                                <p class="spot_name">江島神社</p>
-                            </div>
+                            <a href="./post/sightseeing.html">
+                                <p class="cat">スポット</p>
+                                <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
+                                <div class="article_detail">
+                                    <p class="locate">江ノ島島内</p>
+                                    <h3 class="article_ttl">日本三代弁財天を祀る<br>江ノ島の守り神</h3>
+                                    <p class="spot_name">江島神社</p>
+                                </div>
+                            </a>
                         </article>
                         <article class="article_card sightseeing shadow-wt">
-                            <p class="cat">スポット</p>
-                            <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
-                            <div class="article_detail">
-                                <p class="locate">江ノ島島内</p>
-                                <h3 class="article_ttl">日本三代弁財天を祀る<br>江ノ島の守り神</h3>
-                                <p class="spot_name">江島神社</p>
-                            </div>
+                            <a href="./post/sightseeing.html">
+                                <p class="cat">スポット</p>
+                                <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
+                                <div class="article_detail">
+                                    <p class="locate">江ノ島島内</p>
+                                    <h3 class="article_ttl">日本三代弁財天を祀る<br>江ノ島の守り神</h3>
+                                    <p class="spot_name">江島神社</p>
+                                </div>
+                            </a>
                         </article>
                         <article class="article_card sightseeing shadow-wt">
-                            <p class="cat">スポット</p>
-                            <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
-                            <div class="article_detail">
-                                <p class="locate">江ノ島島内</p>
-                                <h3 class="article_ttl">日本三代弁財天を祀る<br>江ノ島の守り神</h3>
-                                <p class="spot_name">江島神社</p>
-                            </div>
+                            <a href="./post/sightseeing.html">
+                                <p class="cat">スポット</p>
+                                <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
+                                <div class="article_detail">
+                                    <p class="locate">江ノ島島内</p>
+                                    <h3 class="article_ttl">日本三代弁財天を祀る<br>江ノ島の守り神</h3>
+                                    <p class="spot_name">江島神社</p>
+                                </div>
+                            </a>
                         </article>
                         <article class="article_card sightseeing shadow-wt">
-                            <p class="cat">スポット</p>
-                            <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
-                            <div class="article_detail">
-                                <p class="locate">江ノ島島内</p>
-                                <h3 class="article_ttl">日本三代弁財天を祀る<br>江ノ島の守り神</h3>
-                                <p class="spot_name">江島神社</p>
-                            </div>
+                            <a href="./post/sightseeing.html">
+                                <p class="cat">スポット</p>
+                                <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
+                                <div class="article_detail">
+                                    <p class="locate">江ノ島島内</p>
+                                    <h3 class="article_ttl">日本三代弁財天を祀る<br>江ノ島の守り神</h3>
+                                    <p class="spot_name">江島神社</p>
+                                </div>
+                            </a>
                         </article>
                         <article class="article_card sightseeing shadow-wt">
-                            <p class="cat">スポット</p>
-                            <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
-                            <div class="article_detail">
-                                <p class="locate">江ノ島島内</p>
-                                <h3 class="article_ttl">日本三代弁財天を祀る<br>江ノ島の守り神</h3>
-                                <p class="spot_name">江島神社</p>
-                            </div>
+                            <a href="./post/sightseeing.html">
+                                <p class="cat">スポット</p>
+                                <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
+                                <div class="article_detail">
+                                    <p class="locate">江ノ島島内</p>
+                                    <h3 class="article_ttl">日本三代弁財天を祀る<br>江ノ島の守り神</h3>
+                                    <p class="spot_name">江島神社</p>
+                                </div>
+                            </a>
                         </article>
                     </div>
                 </div>
 
-                <a href="./archive-sightseeing.html" class="button border">一覧を見る</a>
+                <a href="./archive/sightseeing.html" class="button border">一覧を見る</a>
             </section>
 
             <section class="column" id="column">
@@ -192,57 +225,69 @@
 
                 <div class="article_cards_list">
                     <div class="article_cards_list">
+                        <div class="slider_btn left" id="slider_btn__left02"><i class="fa-sharp fa-solid fa-chevron-left"></i></div>
+                        <div class="slider_btn right" id="slider_btn__right02"><i class="fa-sharp fa-solid fa-chevron-right"></i></div>
                         <div class="article_cards_wrapper">
                             <article class="article_card column shadow-wt">
-                                <p class="cat">コラム</p>
-                                <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
-                                <div class="article_detail">
-                                    <p class="posted_date"><time>2023.08.31</time></p>
-                                    <h3 class="article_ttl">江ノ電に初めて乗った<br>15の夏</h3>
-                                    <p class="author_name">ライター太郎</p>
-                                </div>
+                                <a href="./post/column.html">
+                                    <p class="cat">コラム</p>
+                                    <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
+                                    <div class="article_detail">
+                                        <p class="posted_date"><time>2023.08.31</time></p>
+                                        <h3 class="article_ttl">江ノ電に初めて乗った<br>15の夏</h3>
+                                        <p class="author_name">ライター太郎</p>
+                                    </div>
+                                </a>
                             </article>
                             <article class="article_card column shadow-wt">
-                                <p class="cat">コラム</p>
-                                <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
-                                <div class="article_detail">
-                                    <p class="posted_date"><time>2023.08.31</time></p>
-                                    <h3 class="article_ttl">江ノ電に初めて乗った<br>15の夏</h3>
-                                    <p class="author_name">ライター太郎</p>
-                                </div>
+                                <a href="./post/column.html">
+                                    <p class="cat">コラム</p>
+                                    <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
+                                    <div class="article_detail">
+                                        <p class="posted_date"><time>2023.08.31</time></p>
+                                        <h3 class="article_ttl">江ノ電に初めて乗った<br>15の夏</h3>
+                                        <p class="author_name">ライター太郎</p>
+                                    </div>
+                                </a>
                             </article>
                             <article class="article_card column shadow-wt">
-                                <p class="cat">コラム</p>
-                                <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
-                                <div class="article_detail">
-                                    <p class="posted_date"><time>2023.08.31</time></p>
-                                    <h3 class="article_ttl">江ノ電に初めて乗った<br>15の夏</h3>
-                                    <p class="author_name">ライター太郎</p>
-                                </div>
+                                <a href="./post/column.html">
+                                    <p class="cat">コラム</p>
+                                    <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
+                                    <div class="article_detail">
+                                        <p class="posted_date"><time>2023.08.31</time></p>
+                                        <h3 class="article_ttl">江ノ電に初めて乗った<br>15の夏</h3>
+                                        <p class="author_name">ライター太郎</p>
+                                    </div>
+                                </a>
                             </article>
                             <article class="article_card column shadow-wt">
-                                <p class="cat">コラム</p>
-                                <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
-                                <div class="article_detail">
-                                    <p class="posted_date"><time>2023.08.31</time></p>
-                                    <h3 class="article_ttl">江ノ電に初めて乗った<br>15の夏</h3>
-                                    <p class="author_name">ライター太郎</p>
-                                </div>
+                                <a href="./post/column.html">
+                                    <p class="cat">コラム</p>
+                                    <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
+                                    <div class="article_detail">
+                                        <p class="posted_date"><time>2023.08.31</time></p>
+                                        <h3 class="article_ttl">江ノ電に初めて乗った<br>15の夏</h3>
+                                        <p class="author_name">ライター太郎</p>
+                                    </div>
+                                </a>
                             </article>
                             <article class="article_card column shadow-wt">
-                                <p class="cat">コラム</p>
-                                <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
-                                <div class="article_detail">
-                                    <p class="posted_date"><time>2023.08.31</time></p>
-                                    <h3 class="article_ttl">江ノ電に初めて乗った<br>15の夏</h3>
-                                    <p class="author_name">ライター太郎</p>
-                                </div>
+                                <a href="./post/column.html">
+                                    <p class="cat">コラム</p>
+                                    <img src="./img/shrine.png" alt="江島神社_サムネイル" class="thumbnail">
+                                    <div class="article_detail">
+                                        <p class="posted_date"><time>2023.08.31</time></p>
+                                        <h3 class="article_ttl">江ノ電に初めて乗った<br>15の夏</h3>
+                                        <p class="author_name">ライター太郎</p>
+                                    </div>
+                                </a>
                             </article>
                         </div>
                     </div>
                 </div>
 
-                <a href="/archive-column.html" class="button border">一覧を見る</a>
+                <a href="./archive/column.html" class="button border">一覧を見る</a>
             </section>
             <section class="about" id="about">
                 <h2 class="heading_cursive">About</h2>
@@ -250,7 +295,7 @@
                 <p>えのしまトリップは、日本有数の観光スポットである江ノ島の観光情報、そして
                     江ノ島で暮らす人々の生活を紹介するWebマガジンです。
                 </p>
-                <a href="/column" class="button blue">詳しく見る</a>
+                <a href="./archive/column.html" class="button blue">詳しく見る</a>
             </section>
 
             <section class="news" id="news">
@@ -258,82 +303,62 @@
                 <p class="heading_desc">お知らせ</p>
                 <div class="news_cards_list">
                     <article class="news_card">
-                        <time>2023.07.01</time>
-                        <p class="news_cat">ジャンル</p>
-                        <h3>ニュースのタイトル</h3>
+                        <a href="../post/news.html" class="isHover__fade">
+                            <time datetime="2023-07-01">2023.07.01</time>
+                            <p class="news_cat">ジャンル</p>
+                            <h3>ニュースのタイトル</h3>
+                        </a>
                     </article>
                     <article class="news_card">
-                        <time>2023.07.01</time>
-                        <p class="news_cat">ジャンル</p>
-                        <h3>ニュースのタイトル</h3>
+                        <a href="../post/news.html" class="isHover__fade">
+                            <time datetime="2023-07-01">2023.07.01</time>
+                            <p class="news_cat">ジャンル</p>
+                            <h3>ニュースのタイトル</h3>
+                        </a>
                     </article>
                     <article class="news_card">
-                        <time>2023.07.01</time>
-                        <p class="news_cat">ジャンル</p>
-                        <h3>ニュースのタイトル</h3>
+                        <a href="../post/news.html" class="isHover__fade">
+                            <time datetime="2023-07-01">2023.07.01</time>
+                            <p class="news_cat">ジャンル</p>
+                            <h3>ニュースのタイトル</h3>
+                        </a>
                     </article>
                 </div>
 
-                <a href="/column" class="button blue">もっと見る</a>
+                <a href="./archive/news.html" class="button blue">もっと見る</a>
             </section>
-            <figure class="banner">
-                <img src="./img/banner.png" alt="メールマガジン登録のご案内"/>
-            </figure>
-            <section class="sns">
-                <h2 class="heading_cursive">Follow me!</h2>
-                <p class="heading_desc">SNSのフォローをお願いいたします！</p>
-                <ul class="sns_logos">
-                    <li><i class="fa-brands fa-x-twitter"></i></li>
-                    <li><i class="fa-brands fa-instagram"></i></li>
-                    <li><i class="fa-brands fa-facebook"></i></li>
-                </ul>
-            </section>
+            <div class="banner">
+
+                <img src="./asset/banner.jpg" alt="メールマガジン登録のご案内"/>
+            </div>
+
         </article>
     </main>
+    <!--ここからフッター共通パーツ-->
     <footer id="site_footer">
         <p class="footer_logo"><img src="./img/logo_blue.png" alt="えのしまトリップ"/></p>
         <ul class="footer_menu"><!--aタグ適宜追加-->
-            <li>観光スポット</li>
-            <li>コラム</li>
-            <li>ギャラリー</li>
-            <li>えのしまトリップとは</li>
-            <li>江ノ島へのアクセス</li>
-            <li>メールマガジン</li>
-            <li>ライター採用</li>
-            <li>お問い合わせ</li>
+            <li><a href="./archive/sightseeing.html" class="isHover__fade">観光スポット</a></li>
+            <li><a href="./archive/column.html" class="isHover__fade">コラム</a></li>
+            <li><a href="./page/photograph.html" class="isHover__fade">ギャラリー</a></li>
+            <li><a href="" class="isHover__fade">えのしまトリップとは</a></li>
+            <li><a href="" class="isHover__fade">江ノ島へのアクセス</a></li>
+            <li><a href="" class="isHover__fade">メールマガジン</a></li>
+            <li><a href="" class="isHover__fade">ライター採用</a></li>
+            <li><a href="" class="isHover__fade">お問い合わせ</a></li>
         </ul>
         <ul class="sns_logos">
-            <li><i class="fa-brands fa-x-twitter"></i></li>
-            <li><i class="fa-brands fa-instagram"></i></li>
-            <li><i class="fa-brands fa-facebook"></i></li>
+            <li><a href=""><img src="./asset/f_logo_RGB-Blue_58.png" alt="facebook"></a></li>
+            <li><a href=""><img src="./asset/Instagram_Glyph_Gradient.png" alt="Instagram"></a></li>
         </ul>
         <small>&copy;えのしまトリップ 2023</small>
     </footer>
-    <script>
-        function menu__isOpened(e){
-            //ハンバーガーメニューの挙動制御
-            const hamburger = document.querySelectorAll('#hamburger_menu_list li');
-            var e = document.getElementById('menu_btn');
-            const menu = document.getElementById('hamburger_menu');
-            if(!menu.classList.contains('is_opened')){
-                menu.classList.add('is_opened');
-                document.body.classList.add('is_fixed');
-                console.log('is_opened');
-                hamburger.forEach((e)=>{
-                    e.classList.add('is_animated');
+    <!--ここまでフッター共通パーツ-->
+</div>
 
-                })
-            }else{
-                menu.classList.remove('is_opened');
-                document.body.classList.remove('is_fixed');
-                console.log('is_closed');
-                hamburger.forEach((e)=>{
-                    e.classList.remove('is_animated');
-                })
-                
-            }
-            console.log(e);
-        }
+    <script type="text/javascript" src="./js/header.js"></script>
+    <script>
+
         //スクロール量に応じたアニメーション
         const header = document.getElementById('site_header');
         header.classList.add('is_default');
@@ -349,6 +374,13 @@
         const articleCard = document.querySelector('.article_card').clientWidth;
         const articleList2 = document.querySelector('.sightseeing .article_cards_wrapper');
         const articleList3 = document.querySelector('.column .article_cards_wrapper');
+
+        const sliderBtnLeft__01 = document.getElementById('slider_btn__left01');   
+        const sliderBtnRight__01 = document.getElementById('slider_btn__right01');   
+
+        const sliderBtnLeft__02 = document.getElementById('slider_btn__left02');   
+        const sliderBtnRight__02 = document.getElementById('slider_btn__right02');   
+
         articleList1.animate(
             [
                 { transform: `translateX(${articleCard + 24}px)` },
@@ -360,27 +392,78 @@
             }
         );
 
-        // articleList2.animate(
-        //     [
-        //         { transform: `translateX(${articleCard + 24}px)` },
-        //         { transform: `translateX(-${articleCard + 24}px)` }
-        //     ],
-        //     {
-        //         duration: 30000,
-        //         iterations: Infinity
-        //     }
-        // );
+        ////観光名所のカルーセル操作
+        //1列目
+        var pos01 = 0;
+        function handleCarousel__01(){
+            var currentPos = pos01;
+            var currentCardId = 3;
 
-        // articleList3.animate(
-        //     [
-        //         { transform: `translateX(${articleCard + 24}px)` },
-        //         { transform: `translateX(-${articleCard + 24}px)` }
-        //     ],
-        //     {
-        //         duration: 30000,
-        //         iterations: Infinity
-        //     }
-        // );
+            articleList2.style = `transform: translateX(0px)`;
+
+            //左のボタン押したとき
+            sliderBtnLeft__01.addEventListener('click', ()=>{
+
+                if(currentCardId > 1 && currentCardId <= 5){
+                    articleList2.style = `transform: translateX(${currentPos + articleCard + 24}px)`;
+                    currentPos = currentPos + articleCard + 24;
+                    currentCardId = currentCardId - 1;
+                    console.log(currentCardId);
+                }
+            })
+
+            //右rのボタン押したとき
+            sliderBtnRight__01.addEventListener('click', ()=>{
+
+                if(currentCardId >= 1 && currentCardId < 5){
+                    articleList2.style = `transform: translateX(${currentPos - ( articleCard + 24 )}px)`;
+                    currentPos = currentPos - ( articleCard + 24 );
+                    currentCardId = currentCardId + 1;
+                    console.log(currentCardId);
+                }
+                })
+
+            return currentPos;
+        }
+
+        pos01 = handleCarousel__01();
+        
+        //2列目
+        var pos02 = 0;
+
+        function handleCarousel__02(){
+            var currentPos = pos02;
+            var currentCardId = 3;
+
+            articleList2.style = `transform: translateX(0px)`;
+
+            //左のボタン押したとき
+            sliderBtnLeft__02.addEventListener('click', ()=>{
+
+                if(currentCardId > 1 && currentCardId <= 5){
+                    articleList3.style = `transform: translateX(${currentPos + articleCard + 24}px)`;
+                    currentPos = currentPos + articleCard + 24;
+                    currentCardId = currentCardId - 1;
+                    console.log(currentCardId);
+                }
+            })
+
+            //右rのボタン押したとき
+            sliderBtnRight__02.addEventListener('click', ()=>{
+
+                if(currentCardId >= 1 && currentCardId < 5){
+                    articleList3.style = `transform: translateX(${currentPos - ( articleCard + 24 )}px)`;
+                    currentPos = currentPos - ( articleCard + 24 );
+                    currentCardId = currentCardId + 1;
+                    console.log(currentCardId);
+                }
+                })
+
+            return currentPos;
+        }
+
+        pos02 = handleCarousel__02();
+        
 
         window.addEventListener("hashchange", function() {
         var fixedOffset = header.offsetHeight;
@@ -405,16 +488,31 @@
             
             e.addEventListener('mouseover', ()=>{
                 cursor.classList.add('isHover');
-                console.log(e);
+                
             })
             e.addEventListener('mouseout', ()=>{
                 cursor.classList.remove('isHover');
-                console.log('out!');
             })
         })
+
+        //ローディングアニメーション
+
+        function loadingAnimate(time){
+
+
+                document.body.classList.add('is_fixed');
+            setTimeout(()=>{
+                loader.classList.remove('is_loading');
+                document.body.classList.remove('is_fixed');
+            }, time)
+        }
+
+        //初回読み込み時のみ実行
+        loadingAnimate(2000);
 
 
     </script>
     
 </body>
+
 </html>

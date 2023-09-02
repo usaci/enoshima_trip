@@ -382,7 +382,7 @@ main{
     position: relative;
 }
 
-main.archive, main.single{
+main.archive, main.single, main.page{
     margin-top: 100px;
 }
 .key_visual{
@@ -697,9 +697,6 @@ p.heading_desc{
     margin-top: 24px;
 }
 
-.post__footer .sns_logos{
-    justify-content: center;
-}
 
 .sns_logos img{
     width: 25px;
@@ -811,9 +808,18 @@ nav#hamburger_menu .sns_logos{
 
 main.single .post__header.news{
     height: 100%;
-    padding: 4em;
+    padding: 4.3em;
     background: url('../img/miharashi.jpg');
     color: var(--color-original-white);
+}
+
+main#main_content .page__header{
+    height: 100%;
+    padding: 4em;
+    background: url(../img/iwaya_01.png);
+    color: var(--color-original-white);
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -907,31 +913,34 @@ footer .sns_logos li{
     flex-direction: column;
 }
 /* 記事ページのレイアウト */
-main.single{
+main.single, main.page{
     background: var(--color-original-white);
 }
-main.single .post__header, main.single .post__mainText, main.single .post__footer{
+main.single .post__header, main.single .post__mainText, main.single .post__footer, main.page .page__header,main.page .page__mainText {
     color: var(--main-theme-color);
     box-sizing: border-box;
     padding: 0px 20px;
 }
 
-main.single .post__header{
+main.single .post__header, main.page .page__header{
     padding: 12px 20px;
 }
 
-main.single .post__mainText{
+main.single .post__mainText, main.page .page__mainText{
     display: flex;
     flex-direction: column;
     gap: 24px;
     padding: 64px 20px;
 }
 
-main.single .post__footer{
+main.single .post__footer,main.page .page__mainText{
     padding-bottom: 64px;
     background: var(--color-original-white);
 }
 
+.post__footer .sns_logos{
+    justify-content: center;
+}
 main.single .post__share{
     text-align: center;
     display: flex;
@@ -984,12 +993,12 @@ article{
 }
 
 .photo_ttl{
-    font-size: 32px;
+    font-size: 2.8rem;
     font-weight: 600;
     text-align: justify;
 }
 
-.contents__photograph {
+.contents__photograph{
     display: flex;
     flex-direction: column;
     gap: 40px;
